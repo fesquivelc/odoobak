@@ -26,6 +26,7 @@ def do_backup(web_container, db_container, db_name):
     os.system("tar czf {}.tar.gz filestore dump.sql".format(filename))
     # Eliminamos residuos
     os.system("rm -rf dump.sql filestore")
+    print("El backup se encuentra en el archivo {}.tar.gz".format(filename))
 
 
 def do_restore():
